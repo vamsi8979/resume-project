@@ -1,0 +1,405 @@
+:root {
+    --header-background: #fff;
+    --profile-font: #000;
+    --heading-text: #032145;
+    --heading-text-underline: #3c89e6;
+    --hero-img-overlay: #050d18;
+    --hero-img-overlay-opacity: 0.3;
+    --hero-heading-text: #000;
+    --hero-paragraph-text: #fff;
+    --hero-span-text: #23599f;
+    --underline-effect: #032145;
+    --theme-switch-text: #000;
+    --section-background: #f1f1f1;
+    --img-border:#fff;
+    --shadow-color: #000;
+    --nav-link: #004dbd;
+    --exp-role:#00427f;
+    --project-slide-show:#f1f1f1;
+    --project-text:#000;
+    --carousel-invert-value:100%;
+    --hobbies-img-overlay-opacity:0.5;
+}
+
+[data-theme="dark"] {
+    --header-background: #040b14;
+    --profile-font: #fff;
+    --heading-text: #0953ac;
+    --heading-text-underline: #3c89e6;
+    --hero-img-overlay: #050d18;
+    --hero-img-overlay-opacity: 0.6;
+    --hero-heading-text: #fff;
+    --hero-paragraph-text: #fff;
+    --hero-span-text: #040b14;
+    --underline-effect: #106ad7;
+    --theme-switch-text: #fff;
+    --section-background: #191919;
+    --shadow-color: #fff;
+    --nav-link: #0d6efd;
+    --img-border:#fff;
+    --exp-role:#007bee;
+    --project-slide-show:#212529;
+    --project-text:#fff;
+    --carousel-invert-value:0%;
+    --hobbies-img-overlay-opacity:0.7;
+}
+body{
+    background: var(--section-background);
+}
+.nav-link {
+    color: var(--nav-link);
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    transition: all ease-in-out 0.6s;
+    z-index: 9997;
+    padding: 0 15px;
+    background: var(--header-background);
+    overflow-y: auto;
+}
+
+.profile {
+    padding: 0px;
+    color: var(--profile-font);
+    font-size: 21px;
+    font-weight: 700;
+    text-align: center;
+    margin: 5%;
+}
+.custom-img-overlay{
+    background: var(--hero-img-overlay);
+    opacity: var(--hobbies-img-overlay-opacity);
+}
+.custom-cad-title{
+    margin-top: 30%;
+    text-align: center;
+    color: #fff;
+    opacity: 1;
+}
+.navbar li {
+    list-style: none;
+}
+
+.heading-text {
+    font-weight: 700;
+    color: var(--heading-text);
+}
+
+.heading-text:after {
+    content: "";
+    background-color: var(--heading-text-underline);
+    display: block;
+    width: 50%;
+    height: 3px;
+}
+
+.width-fit-content {
+    width: fit-content;
+}
+
+.profile-section {
+    padding: 3%;
+}
+
+.details {
+    font-size: 24px;
+    padding: 2%;
+    margin-top: 5%;
+    font-family: "Raleway", sans-serif;
+}
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: url("../assets/hero-bg.jpg") top center;
+    background-size: cover;
+    transition: all ease-in-out 0.6s;
+}
+.company-desc{
+    width: 100%;
+    font-size: 20px;
+    line-height: 1.5rem;
+}
+#about,  #contact, #hobbies , #experience,#education,#achievements ,#projects , #Skills{
+    width: 100%;
+    /* height: 100vh; */
+    padding: 3% 3% 1% 3%;
+    background: var(--section-background);
+    color: var(--profile-font);
+    transition: all ease-in-out 0.6s;
+}
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(var(--carousel-invert-value));
+}
+.carousel{
+    background: var(--section-background);
+}
+#projects{
+    padding: 1% 3% 1% 3%;
+}
+#projects .carousel-inner .bg-dark{
+    background-color: var(--project-slide-show)!important;
+    transition: all ease-in-out 0.6s;
+}
+#projects .carousel-inner .text-white{
+    color: var(--project-text)!important;
+    transition: all ease-in-out 0.6s;
+}
+#hobbies .bg-dark{
+    background-color: var(--project-slide-show)!important;
+    transition: all ease-in-out 0.6s;
+}
+#hobbies .text-white{
+    color: var(--project-text)!important;
+    transition: all ease-in-out 0.6s;
+}
+#project-card-1,#project-card-2{
+    font-size: 20px;
+}
+#achievements ul{
+    font-size: 20px;
+}
+#hobbies ul{
+    font-size: 20px;
+}
+#experience .nav-item .nav-link{
+    font-size: 18px;
+}
+#experience .nav-item .nav-link.active{
+    font-weight: 700;
+}
+.profile-section img {
+    border-radius: 60%;
+}
+.profile-section img:hover {
+    cursor: pointer;
+    border: 5px solid var(--img-border);
+}
+#experience .exp-role{
+    color: var(--exp-role);
+    font-weight: 600;
+}
+.boxshadow-animation {
+    animation-name: boxshadow;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes boxshadow {
+    from {
+        box-shadow: -0px 0px 30px -19px var(--shadow-color);
+    }
+
+    to {
+        box-shadow: 0px 0px 50px -19px var(--shadow-color);
+    }
+}
+.custom-img-card{
+    overflow: hidden;
+}
+.img-scale-animation{
+    animation-name: img-scale;
+    animation-duration: 25s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes img-scale {
+    from {
+        transform: scale(1) translate(0, 0);
+        transform-origin: 16% 84%;
+    }
+
+    to {
+        transform: scale(1.25) translate(-20px, 15px);
+        transform-origin: left bottom;
+    }
+}
+
+.about-text {
+    margin-top: 2%;
+    font-size: large;
+    line-height: 2rem;
+}
+
+#hero:before {
+    content: "";
+    background: var(--hero-img-overlay);
+    opacity: var(--hero-img-overlay-opacity);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Raleway", sans-serif;
+}
+
+#hero .hero-container {
+    position: relative;
+    z-index: 2;
+    min-width: 300px;
+    margin-right: 25%;
+}
+
+#hero h1 {
+    margin: 0 0 10px 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 56px;
+    color: var(--hero-heading-text);
+}
+
+#hero p {
+    color: var(--hero-paragraph-text);
+    margin-bottom: 50px;
+    font-size: 26px;
+    font-family: "Poppins", sans-serif;
+}
+
+#hero p span {
+    padding-bottom: 4px;
+    letter-spacing: 1px;
+    color: var(--hero-span-text);
+}
+
+@media (min-width: 1024px) {
+    #hero {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    #hero h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+}
+
+.move-left-and-right-animation {
+    animation-name: leftandright;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes leftandright {
+    from {
+        margin-right: 25%;
+    }
+
+    to {
+        margin-right: 15%;
+    }
+}
+
+#main {
+    margin-left: 300px;
+}
+
+@media (max-width: 1199px) {
+    #header {
+        left: -300px;
+    }
+
+    #main {
+        margin-left: 0;
+    }
+}
+
+.underline-effect {
+    background:
+        linear-gradient(90deg, transparent calc(100%/4), currentColor 0 calc(300%/4), transparent 0) var(--d, 100%) 100% /200% 3px repeat-x;
+    transition: 0.5s;
+    font-weight: 700;
+    color: var(--underline-effect);
+}
+
+.underline-effect:hover {
+    --d: -100%;
+}
+
+
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.theme-switch-wrapper em {
+    margin-left: 10px;
+    font-size: 1rem;
+    color: var(--theme-switch-text);
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked+.slider {
+    background-color: #164991;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
