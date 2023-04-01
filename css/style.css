@@ -11,14 +11,14 @@
     --underline-effect: #032145;
     --theme-switch-text: #000;
     --section-background: #f1f1f1;
-    --img-border:#fff;
+    --img-border: #fff;
     --shadow-color: #000;
     --nav-link: #004dbd;
-    --exp-role:#00427f;
-    --project-slide-show:#f1f1f1;
-    --project-text:#000;
-    --carousel-invert-value:100%;
-    --hobbies-img-overlay-opacity:0.5;
+    --exp-role: #00427f;
+    --project-slide-show: #f1f1f1;
+    --project-text: #000;
+    --carousel-invert-value: 100%;
+    --hobbies-img-overlay-opacity: 0.5;
 }
 
 [data-theme="dark"] {
@@ -36,19 +36,22 @@
     --section-background: #191919;
     --shadow-color: #fff;
     --nav-link: #0d6efd;
-    --img-border:#fff;
-    --exp-role:#007bee;
-    --project-slide-show:#212529;
-    --project-text:#fff;
-    --carousel-invert-value:0%;
-    --hobbies-img-overlay-opacity:0.7;
+    --img-border: #fff;
+    --exp-role: #007bee;
+    --project-slide-show: #212529;
+    --project-text: #fff;
+    --carousel-invert-value: 0%;
+    --hobbies-img-overlay-opacity: 0.7;
 }
-body{
+
+body {
     background: var(--section-background);
 }
+
 .nav-link {
     color: var(--nav-link);
 }
+
 .header {
     position: fixed;
     top: 0;
@@ -70,16 +73,19 @@ body{
     text-align: center;
     margin: 5%;
 }
-.custom-img-overlay{
+
+.custom-img-overlay {
     background: var(--hero-img-overlay);
     opacity: var(--hobbies-img-overlay-opacity);
 }
-.custom-cad-title{
+
+.custom-cad-title {
     margin-top: 30%;
     text-align: center;
     color: #fff;
     opacity: 1;
 }
+
 .navbar li {
     list-style: none;
 }
@@ -119,12 +125,14 @@ body{
     background-size: cover;
     transition: all ease-in-out 0.6s;
 }
-.company-desc{
+
+.company-desc {
     width: 100%;
     font-size: 20px;
     line-height: 1.5rem;
 }
-#about,  #contact, #hobbies , #experience,#education,#achievements ,#projects , #Skills{
+
+#about, #contact, #hobbies, #experience, #education, #achievements, #projects, #Skills {
     width: 100%;
     /* height: 100vh; */
     padding: 3% 3% 1% 3%;
@@ -132,58 +140,74 @@ body{
     color: var(--profile-font);
     transition: all ease-in-out 0.6s;
 }
+
 .carousel-control-next,
 .carousel-control-prev {
     filter: invert(var(--carousel-invert-value));
 }
-.carousel{
+
+.carousel {
     background: var(--section-background);
 }
-#projects{
+
+#projects {
     padding: 1% 3% 1% 3%;
 }
-#projects .carousel-inner .bg-dark{
-    background-color: var(--project-slide-show)!important;
+
+#projects .carousel-inner .bg-dark {
+    background-color: var(--project-slide-show) !important;
     transition: all ease-in-out 0.6s;
 }
-#projects .carousel-inner .text-white{
-    color: var(--project-text)!important;
+
+#projects .carousel-inner .text-white {
+    color: var(--project-text) !important;
     transition: all ease-in-out 0.6s;
 }
-#hobbies .bg-dark{
-    background-color: var(--project-slide-show)!important;
+
+#hobbies .bg-dark {
+    background-color: var(--project-slide-show) !important;
     transition: all ease-in-out 0.6s;
 }
-#hobbies .text-white{
-    color: var(--project-text)!important;
+
+#hobbies .text-white {
+    color: var(--project-text) !important;
     transition: all ease-in-out 0.6s;
 }
-#project-card-1,#project-card-2{
+
+#project-card-1, #project-card-2 {
     font-size: 20px;
 }
-#achievements ul{
+
+#achievements ul {
     font-size: 20px;
 }
-#hobbies ul{
+
+#hobbies ul {
     font-size: 20px;
 }
-#experience .nav-item .nav-link{
+
+#experience .nav-item .nav-link {
     font-size: 18px;
 }
-#experience .nav-item .nav-link.active{
+
+#experience .nav-item .nav-link.active {
     font-weight: 700;
 }
+
 .profile-section img {
     border-radius: 60%;
 }
+
 .profile-section img:hover {
     cursor: pointer;
     border: 5px solid var(--img-border);
 }
-#experience .exp-role{
+
+#experience .exp-role {
     color: var(--exp-role);
     font-weight: 600;
 }
+
 .boxshadow-animation {
     animation-name: boxshadow;
     animation-duration: 6s;
@@ -201,16 +225,19 @@ body{
         box-shadow: 0px 0px 50px -19px var(--shadow-color);
     }
 }
-.custom-img-card{
+
+.custom-img-card {
     overflow: hidden;
 }
-.img-scale-animation{
+
+.img-scale-animation {
     animation-name: img-scale;
     animation-duration: 25s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+
 @keyframes img-scale {
     from {
         transform: scale(1) translate(0, 0);
